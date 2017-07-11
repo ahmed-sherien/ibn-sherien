@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
+using StructureMap.AspNetCore;
 
 namespace AhmedSherien.Web
 {
@@ -17,6 +18,7 @@ namespace AhmedSherien.Web
                 .UseIISIntegration()
                 .UseStartup<Startup>()
                 .UseApplicationInsights()
+                .UseStructureMap()
                 .Build();
 
             host.Run();

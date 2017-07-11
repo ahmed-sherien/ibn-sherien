@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using StructureMap;
 
 namespace AhmedSherien.Web
 {
@@ -21,6 +22,15 @@ namespace AhmedSherien.Web
                 options.ViewLocationFormats.Clear();
                 options.ViewLocationFormats.Add("~/{1}/Views/{0}.cshtml");
                 options.ViewLocationFormats.Add("~/Shared/Views/{0}.cshtml");
+            });
+        }
+
+        public void ConfigureContainer(Registry registry)
+        {
+            registry.Scan(scanner =>
+            {
+                scanner.AssembliesFromApplicationBaseDirectory();
+                scanner.WithDefaultConventions();
             });
         }
 
