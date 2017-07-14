@@ -10,6 +10,7 @@ namespace AhmedSherien.Persistence.Shared
 {
     public interface IDatabaseContext
     {
+        DbSet<Company> Companies { get; set; }
         DbSet<T> Set<T>() where T : class, IEntity;
         void Save();
     }
