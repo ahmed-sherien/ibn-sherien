@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AhmedSherien.Domain", "Ahme
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AhmedSherien.Application", "AhmedSherien.Application\AhmedSherien.Application.csproj", "{273B6772-6F01-44D9-AE8E-14A81D1BBEC4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AhmedSherien.Persistence", "AhmedSherien.Persistence\AhmedSherien.Persistence.csproj", "{B9BDE017-8E7A-4B37-92F7-220F076D4D3A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{273B6772-6F01-44D9-AE8E-14A81D1BBEC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{273B6772-6F01-44D9-AE8E-14A81D1BBEC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{273B6772-6F01-44D9-AE8E-14A81D1BBEC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9BDE017-8E7A-4B37-92F7-220F076D4D3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9BDE017-8E7A-4B37-92F7-220F076D4D3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9BDE017-8E7A-4B37-92F7-220F076D4D3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9BDE017-8E7A-4B37-92F7-220F076D4D3A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
