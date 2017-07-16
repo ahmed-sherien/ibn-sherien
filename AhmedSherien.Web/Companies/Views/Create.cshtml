@@ -1,0 +1,22 @@
+﻿@using AhmedSherien.Web.Companies.Models
+@model CreateCompanyViewModel
+
+
+@{
+    ViewBag.Title = "Create a Company";
+}
+<h1>@ViewBag.Title</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Name" class="control-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
+@section Scripts{
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
