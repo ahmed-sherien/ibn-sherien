@@ -260,3 +260,4 @@ paket-files/
 __pycache__/
 *.pyc
 /AhmedSherien.Web/wwwroot/lib
+AhmedSherien.Web/appsettings.Release.json

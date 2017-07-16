@@ -10,6 +10,7 @@ namespace AhmedSherien.Web.Home
     {
         public IActionResult Index()
         {
+            ViewBag.Message = "Welcome to my website ...";
             return View();
         }
     }

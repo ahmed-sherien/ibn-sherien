@@ -11,6 +11,13 @@ namespace AhmedSherien.Persistence.Shared
 {
     public class DatabaseContext : DbContext, IDatabaseContext
     {
+        private readonly IConfiguration _configuration;
+        public DatabaseContext(IConfiguration configuration)
+        {
+            _configuration = configuration;
+            Database.Migrate();
+        }
+
         public DbSet<Company> Companies { get; set; }
 
         public new DbSet<T> Set<T>() where T : class, IEntity
@@ -28,6 +35,12 @@ namespace AhmedSherien.Persistence.Shared
             base.OnModelCreating(modelBuilder);
 
             new CompaniesConfiguration(modelBuilder.Entity<Company>());
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            base.OnConfiguring(optionsBuilder);
+            optionsBuilder.UseSqlServer(_configuration.GetConnectionString("DefaultConnection"));
         }
     }
 }
